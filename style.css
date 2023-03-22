@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+body {
+    background-color: rgb(231, 250, 254);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+a,
+p,
+span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: rgb(40, 111, 143);
+}
+
+a {
+    text-decoration: none;
+}
+
+.imagem {
+    width: 22%;
+
+}
+
+.redes {
+    width: 100%;
+}
+
+#logo,
+#sobre {
+
+    flex-basis: calc(100%/3.5);
+}
+
+#contato,
+#social {
+    flex-grow: 1;
+}
+
+#sobre {
+    gap: 6rem;
+}
+
+#social {
+    gap: 3rem;
+}
+
+.article-title h2 {
+    font-family: 'Satisfy', cursive;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+
+}
+
+.nav-classe {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    display: flex;
+    gap: 1rem;
+
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    flex-grow: 1;
+    position: relative;
+}
+
+main>article {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: 2.4fr 1fr;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: transform 400ms ease;
+}
+
+main>article[data-status="inactive"] {
+    transform: translateX(-100%);
+}
+
+main>article[data-status="after"] {
+    transform: translateX(100%);
+}
+
+main>article>.article-section {
+    height: 100%;
+}
+
+
+
+.article-image {
+    background-size: contain;
+    background-repeat: round;
+}
+
+.article-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.article-description {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.article-description p {
+    margin: 5%;
+}
+
+.article-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.botao {
+    flex-grow: 0.5;
+    background: rgb(231, 250, 254);
+    border: none;
+    height: 60%;
+}
+
+.anterior {
+    width: 20%;
+}
+
+.proximo {
+    width: 20%;
+}
